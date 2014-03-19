@@ -16,6 +16,7 @@ class kerberos::client($realm = 'EXAMPLE.COM', $domain_realm = {}, $kdc = [], $a
   $allow_weak_crypto = false, $kdc_logfile = 'FILE:/var/log/kdc.log', $admin_logfile = 'FILE:/var/log/kerberos_admin_server.log') inherits kerberos::base {
 
   include kerberos::base
+  include kerberos::server::kadmind
 
   # Provide default content for domain_realm if the user did not
   # specify anything.

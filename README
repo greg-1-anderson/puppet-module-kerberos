@@ -22,8 +22,6 @@ Example Use
 -----------
 
     # Kerberos server (kdc and kadmin)
-    include kerberos::server::kadmind
-
     class {'kerberos::server::kdc':
       realm => 'EXAMPLE.ORG',
     }
